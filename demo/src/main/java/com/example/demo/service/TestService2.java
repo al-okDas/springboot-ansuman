@@ -9,4 +9,15 @@ public class TestService2 implements TestServiceInterface{
     public void doSomething() {
         System.out.println("Successfully called TestService2");
     }
+
+    @Override
+    public void createCourses() {
+
+    }
+
+    @Override
+    public void testTransaction(boolean someCondition) throws Exception {
+
+    }
+
 }

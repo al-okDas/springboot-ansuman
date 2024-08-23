@@ -19,8 +19,21 @@ public class TestController {
     @GetMapping("/test")
     public ResponseEntity<TestPojo> getDisplay() throws Exception {
         testService.doSomething();
-        return ResponseEntity.status(HttpStatusCode.valueOf(500)).build();
+        return ResponseEntity.ok().build();
     }
+
+    @GetMapping("/testcourses")
+    public ResponseEntity<TestPojo> getCourses() throws Exception {
+        testService.createCourses();
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/testtransaction")
+    public ResponseEntity<TestPojo> getTransaction() throws Exception {
+        testService.testTransaction(true);
+        return ResponseEntity.ok().build();
+    }
+
 
 
 
